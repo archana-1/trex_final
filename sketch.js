@@ -81,6 +81,11 @@ function setup() {
   obstaclesGroup = new Group();
   
   score = 0;
+  // adjust frameRate for mobiles
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+  if(isMobile){
+    frameRate(60)
+  }
 }
 
 function draw() {
